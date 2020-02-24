@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="nestedString">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="nestedString Option 1"/>
+			<xs:enumeration value="nestedString Option 2"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="nestedByte">
+		<xs:restriction base="xs:byte">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="doubleNestedByte">
+		<xs:restriction base="nestedByte">
+			<xs:maxInclusive value="10" />
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:element name="MetadataTemplate">
+		<xs:annotation>
+			<xs:documentation>Metadata Template</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+
+
+				<xs:element name="Dataset" minOccurs="1" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Dataset:</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+
+							<!--  dataset information -->
+							<xs:element name="Code">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="D1" />
+										<xs:enumeration value="D2" />
+										<xs:enumeration value="D3" />
+										<xs:enumeration value="D4" />
+										<xs:enumeration value="D5" />
+										<xs:enumeration value="D6" />
+										<xs:enumeration value="D7" />
+										<xs:enumeration value="D8" />
+										<xs:enumeration value="D9" />
+										<xs:enumeration value="D10" />
+										<xs:enumeration value="D11" />
+										<xs:enumeration value="D12" />
+										<xs:enumeration value="D13" />
+										<xs:enumeration value="D14" />
+										<xs:enumeration value="D15" />
+										<xs:enumeration value="D16" />
+										<xs:enumeration value="D17" />
+										<xs:enumeration value="D18" />
+										<xs:enumeration value="D19" />
+										<xs:enumeration value="D20" />
+										<xs:enumeration value="D21" />
+										<xs:enumeration value="D22" />
+										<xs:enumeration value="D23" />
+										<xs:enumeration value="D24" />
+										<xs:enumeration value="D25" />
+										<xs:enumeration value="D26" />
+										<xs:enumeration value="D27" />
+										<xs:enumeration value="D28" />
+										<xs:enumeration value="D29" />
+										<xs:enumeration value="D30" />
+										<xs:enumeration value="D31" />
+										<xs:enumeration value="D32" />
+										<xs:enumeration value="D33" />
+										<xs:enumeration value="D34" />
+										<xs:enumeration value="D35" />
+										<xs:enumeration value="D36" />
+										<xs:enumeration value="D37" />
+										<xs:enumeration value="D38" />
+										<xs:enumeration value="D39" />
+										<xs:enumeration value="D40" />
+										<xs:enumeration value="D41" />
+										<xs:enumeration value="D42" />
+										<xs:enumeration value="D43" />
+										<xs:enumeration value="D44" />
+										<xs:enumeration value="D45" />
+										<xs:enumeration value="D46" />
+										<xs:enumeration value="D47" />
+										<xs:enumeration value="D48" />
+										<xs:enumeration value="D49" />
+										<xs:enumeration value="D50" />
+										<xs:enumeration value="D51" />
+										<xs:enumeration value="D52" />
+										<xs:enumeration value="D53" />
+										<xs:enumeration value="D54" />
+										<xs:enumeration value="D55" />
+										<xs:enumeration value="D56" />
+										<xs:enumeration value="D57" />
+										<xs:enumeration value="D58" />
+										<xs:enumeration value="D59" />
+										<xs:enumeration value="D60" />
+										<xs:enumeration value="D61" />
+										<xs:enumeration value="D62" />
+										<xs:enumeration value="D63" />
+										<xs:enumeration value="D64" />
+										<xs:enumeration value="D65" />
+										<xs:enumeration value="D66" />
+										<xs:enumeration value="D67" />
+										<xs:enumeration value="D68" />
+										<xs:enumeration value="D69" />	
+										<xs:enumeration value="D70" />
+										<xs:enumeration value="D71" />
+										<xs:enumeration value="D72" />
+										<xs:enumeration value="D73" />
+										<xs:enumeration value="D74" />
+										<xs:enumeration value="D75" />
+										<xs:enumeration value="D76" />
+										<xs:enumeration value="D77" />
+										<xs:enumeration value="D78" />
+										<xs:enumeration value="D79" />
+										<xs:enumeration value="D80" />
+										<xs:enumeration value="D81" />
+										<xs:enumeration value="D82" />
+										<xs:enumeration value="D83" />
+										<xs:enumeration value="D84" />
+										<xs:enumeration value="D85" />
+										<xs:enumeration value="D86" />
+										<xs:enumeration value="D87" />
+										<xs:enumeration value="D88" />
+										<xs:enumeration value="D89" />
+										<xs:enumeration value="D90" />
+										<xs:enumeration value="D91" />
+										<xs:enumeration value="D92" />
+										<xs:enumeration value="D93" />
+										<xs:enumeration value="D94" />
+										<xs:enumeration value="D95" />
+										<xs:enumeration value="D96" />
+										<xs:enumeration value="D97" />
+										<xs:enumeration value="D98" />
+										<xs:enumeration value="D99" />	
+										<xs:enumeration value="D100" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Title" default="A short name given to a resource (e.g., Gull GPS movement data)">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Acronym" default="What is the acronym of the resource (e.g., GULLGPS)?">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Path" default="Path of the resource in the data archive.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="Description" default="GPS movement data of 5 GPS monitored seagulls in Amsterdam, The Netherlands, monitored over a period of 3 years (March 2016-March 2019). GPS movement data has been collected using uva-bits tags and were subsequently stored in the uva-bits bird tracking database.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Creator" default="An entity primarily responsible for making the resource.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Publisher" default="An entity responsible for making the resource available.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Contributor" default="An entity responsible for making contributions to the resource.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element name="Type">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Collection" />
+										<xs:enumeration value="Dataset" />
+										<xs:enumeration value="Image" />
+										<xs:enumeration value="InteractiveResource" />
+										<xs:enumeration value="MovingImage" />
+										<xs:enumeration value="PhysicalObject" />
+										<xs:enumeration value="Service" />
+										<xs:enumeration value="Software" />
+										<xs:enumeration value="Sound" />
+										<xs:enumeration value="StillImage" />
+										<xs:enumeration value="Text" />
+										<xs:enumeration value="Group of Images" />
+										<xs:enumeration value="Other" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Format" default="The file format, physical medium of the resource (e.g., csv, tiff, rds, shapefile, fasta).">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="OS" default="If the resource is only readable for a specific Operating System, please specify that Operating System.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Software" default="If the resource is only readable by a specific software, please specify that software.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>	
+
+							<xs:element type="xs:string" name="Identifier" default="The unique identifier of the resource (e.g., doi).">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Source" default="A related resource from which the described resource is derived. For example, a dataset might be an extraction from an existing database, a digitalized museum collection,... Please make sure that the resource can be easily derived, for example by including a weblink.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Rights" default="Information about the rights held in and over the resource (e.g., University of Amsterdam)">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="Language" default="A language of a resource.">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="SpatialCoverage" default="The spatial location or area of the resource. This can be specified by the coordinates of a bounding box,the centroid of an area, the coordinates of a location, but also by the name of the place (e.g. a specific valley, village, city, country, continent).">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="ProjectionSystem" default="In case of spatial data, that includes coordinates, please provide the projection system of the resource (e.g., WGS84 EPSG:4326).">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+
+							<xs:element type="xs:string" name="TemporalCoverage" default="The timestamp (YYYY-MM-DD hh:mm:ss) or time period (from YYYY-MM-DD to YYYY-MM-DD) of the resource. Please use the format YYYY-MM-DD for the date and hh:mm:ss the time." >
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value=".*(\n)?.*"></xs:pattern>
+										<xs:whiteSpace value="collapse" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>			
+
+
+							<xs:element type="xs:string" name="Keywords" minOccurs="1" maxOccurs="5">
+								<xs:annotation>
+									<xs:documentation>Keywords</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							
+							<xs:element type="xs:long" name="SizeMB" default="Size of the resource in MB" />
+
+							<xs:element name="Variable" minOccurs="0" maxOccurs="unbounded" default="1">
+								<xs:annotation>
+									<xs:documentation>ADD COLUMN DESCRIPTIONS</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="Name" default = "Name of a variable/column of a dataset.">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value=".*(\n)?.*"></xs:pattern>
+													<xs:whiteSpace value="collapse" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element type="xs:string" name="Unit" default = "Unit of the variable/column (e.g., meter, square meter, degrees).">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value=".*(\n)?.*"></xs:pattern>
+													<xs:whiteSpace value="collapse" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element type="xs:string" name="Datatype" default="Datatype of the variable/column (e.g., double precision, integer, timestamp).">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value=".*(\n)?.*"></xs:pattern>
+													<xs:whiteSpace value="collapse" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element type="xs:string" name="Description" default="A clear description of the column/variable.">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value=".*(\n)?"></xs:pattern>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>												
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>			
+
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

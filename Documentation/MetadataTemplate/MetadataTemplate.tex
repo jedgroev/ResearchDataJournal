@@ -1,0 +1,322 @@
+%%%%%%%%%%%%  v2.0.0-beta  %%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=1.16in,right=0.91in,top=1.26in,bottom=0.88in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.49in,0.98in,1.47in,1.96in,2.45in,2.94in,3.43in,3.92in,4.41in,4.9in,5.39in,5.88in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{ 
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[H]	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./../customXml/item1.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.3}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   METADATA TEMPLATE   %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{hyperref}
+
+
+
+\pagestyle{plain} %add page numbers 
+\begin{document} %begin document
+%The name of this document: Metadata Template 
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont {\textbf{README FIRST}}\par}
+\newline
+
+This template can be used to describe the metadata of datasets. For some datasets it will be sufficient to fill the table \textbf{\hyperref[sec:generaldescription]{general description}}, which is based on the \textit{\textcolor[HTML]{BC0031}{\href{https://guides.library.ucsc.edu/c.php?g=618773\&p=4306386}{Dublin Core Element Set}}}. Because its generic nature, the Dublin Core does not allow to describe the content of tabular data in a structured manner. In case of tabular data it is essential to understand the meaning of each column which can be described in the table \textbf{\hyperref[sec:columndescription]{column description}}. This template is to facilitate metadata documentation and is not a substitute for existing metadata templates used in specific fields of study. It is especially useful for fields of study where currently metadata standards are lacking. You are free to add records/items if this template does not allow your dataset to be sufficiently described.
+\newline
+
+The template should be seen as a \textbf{flexible tool}. You are free to make a single metadata file for multiple related datasets (e.g., multiple datasets used in one manuscript, multiple datasets used in one analytical workflow) or to make a single metadata file for each dataset separately. This might depend from how your workflow is organized. Also, if a single dataset consists out of many files (e.g., a sample per timestamp, a tiled raster layer, a dataset for each modified parameter) you don't need to describe each file separately. Instead it should be clear from the description, and filenames how the dataset is organized, and also what those files exactly store. 
+\newline
+
+Note that this metadata template is not identical to the \textbf{Research Data Journal}. The latter provides an overview and more general description of a data archive, and the relations between all datasets, results, analysis and manuscripts. Only the Research Data Journal does not sufficiently describe the data itself in order to be reusable.
+\newline 
+
+We recommend to use \textbf{Latex} to modify the metadata template. Please use the online Latex editor \textit{\textcolor[HTML]{BC0031}{\href{https://www.overleaf.com}{https://www.overleaf.com}}}. These are the steps to load in the latex zip:
+\begin{itemize}
+  \item make an account
+  \item click new project 
+  \item click upload project
+  \item load the file 'metadata\_template.zip'
+  \item please start editing - Fill information where you find \textcolor[HTML]{008000}{\%FILL HERE}
+\end{itemize}
+\newline
+
+\newpage 
+
+
+
+%%%%%%%%%%%%%%%%%%%% GENERAL : starts here %%%%%%%%%%%%%%%%%%%%
+{\fontsize{18pt}{21.6pt}\selectfont \textcolor[HTML]{BC0031}{Metadata Template}\par}\par
+
+%%%%%%%%%%%%%%%%%%%% DATASET %%%%%%%%%%%%%%%%%%%%
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{General Description}\par}\par
+\label{sec:dataset1}
+
+Obligatory fields are indicated with an asterisk 
+%%%%%%%%%% GENERIC DESCRIPTION OF DATASETS starts here %%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+\label{sec:generaldescription}
+
+\begin{table}[H]
+ 			\centering
+\fontsize{10.5}{12}\selectfont
+\begin{tabular}{p{1.80in}p{4.09}}
+\hline
+%row no:1
+\multicolumn{1}{|p{1.80in}}{\textbf{Nr}} 
+\multicolumn{1}{|p{4.09in}}{\textit{\textcolor[HTML]{808080}{corresponding code in research data journal (e.g.,D1)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{1.80in}}{\textbf{Title$\ast$}}
+\multicolumn{1}{|p{4.09in}}{\textit{\textcolor[HTML]{808080}{a short name given to the resource (e.g., D1\_GULLGPS)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{1.80in}|}{\textbf{Acronym}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{acronym (e.g., GULLGPS)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{1.80in}|}{\textbf{Path$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{The path of the dataset in the data archive (e.g., DATA\_ARCHIVE/DATA/GULLGPS/)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:5
+\multicolumn{1}{|p{1.80in}|}{\textbf{Description$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{GPS movement data of 5 GPS monitored seagulls in Amsterdam, The Netherlands, monitored over a period of 3 years (March 2016-March 2019). GPS movement data has been collected using uva-bits tags and were subsequently stored in the uva-bits bird tracking database.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:5
+\multicolumn{1}{|p{1.80in}|}{\textbf{Creator$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{An entity primarily responsible for making the resource}}} \\ % FILL HERE 
+\hhline{--}
+%row no:6
+\multicolumn{1}{|p{1.80in}|}{\textbf{Publisher}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{An entity responsible for making the resource available}}} \\ % FILL HERE 
+\hhline{--}
+%row no:7
+\multicolumn{1}{|p{1.80in}|}{\textbf{Contributor}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{An entity responsible for making contributions to the resource}}} \\ % FILL HERE 
+\hhline{--}
+%row no:8
+\multicolumn{1}{|p{1.80in}|}{\textbf{Type}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{examples: Collection , Dataset , Event , Image , InteractiveResource , MovingImage , PhysicalObject , Service , Software , Sound , StillImage , Text, Group of Images}}} \\ % FILL HERE 
+\hhline{--}
+%row no:9
+\multicolumn{1}{|p{1.80in}|}{\textbf{Format$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{The file format, physical medium of the resource (e.g., csv, tiff, rds, shapefile, fasta)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:10
+\multicolumn{1}{|p{1.80in}|}{\textbf{OS$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{If the dataset is only readable for a specific Operating System, please specify that Operating System.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:11
+\multicolumn{1}{|p{1.80in}|}{\textbf{Software$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{If the dataset is only readable by a specific software, please specify that software.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:12
+\multicolumn{1}{|p{1.80in}|}{\textbf{Identifier}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{The unique identifier of the resource (e.g., doi).}}} \\ % FILL HERE 
+\hhline{--}
+%row no:13
+\multicolumn{1}{|p{1.80in}|}{\textbf{Source}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{A related resource from which the described resource is derived.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:14
+\multicolumn{1}{|p{1.80in}|}{\textbf{Rights$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{Information about the rights held in and over the resource (e.g., University of Amsterdam)}}} \\ % FILL HERE 
+\hhline{--}
+%row no:15
+\multicolumn{1}{|p{1.80in}|}{\textbf{Language}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{A language of a resource.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:16
+\multicolumn{1}{|p{1.80in}|}{\textbf{Spatial coverage}} 
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{The spatial location or area of the resource. This can be specified by the coordinates of a bounding box, the centroid of an area, the coordinates of a location, but also by the name of the place (e.g. a specific valley, village, city, country, continent).}}} \\ % FILL HERE 
+\hhline{--}
+%row no:17
+\multicolumn{1}{|p{1.80in}|}{\textbf{Projection system$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{In case of spatial data, that includes coordinates, please provide the projection system of the resource (e.g., WGS84 EPSG:4326).}}} \\ % FILL HERE 
+\hhline{--}
+%row no:18
+\multicolumn{1}{|p{1.80in}|}{\textbf{Temporal coverage$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{The timestamp (YYYY-MM-DD hh:mm:ss) or time period (from YYYY-MM-DD to YYYY-MM-DD) of the resource. Please use the format YYYY-MM-DD for the date and hh:mm:ss the time.}}} \\ % FILL HERE 
+\hhline{--}
+%row no:19
+\multicolumn{1}{|p{1.80in}|}{\textbf{Keywords$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{add keywords related to the dataset}}} \\ % FILL HERE 
+\hhline{--}
+%row no:20
+\multicolumn{1}{|p{1.80in}|}{\textbf{SizeMB$\ast$}}
+\multicolumn{1}{|p{4.09in}|}{\textit{\textcolor[HTML]{808080}{Size of the dataset in MB}}} \\ % FILL HERE 
+\hhline{--}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%% Table No: 2 ends here %%%%%%%%%%%%%%%%%%
+%%%%%%%% GENERIC DESCRIPTION OF DATASETS ends here %%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%% DESCRIPTION OF COLUMNS starts here %%%%%%%%%%%%
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Column description}\par}\par
+If the dataset is tabular, it is obligatory to describe the content of each column.
+%%%%%%%%%%%%%%%%%% Table No: 3 starts here %%%%%%%%%%%%%%%%%
+\label{sec:columndescription}
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.50in}p{1.00in}p{1.00in}p{2.00in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{1.50in}}{\textbf{column name}}  
+\multicolumn{1}{|p{1.00in}}{\textbf{unit}} 
+\multicolumn{1}{|p{1.00in}}{\textbf{data type +}} 
+\multicolumn{1}{|p{2.00in}}{\textbf{description}} \\
+\hhline{----}
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{unique\_id}}} % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{no unit}}} % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{serial}}} % FILL HERE 
+\multicolumn{1}{|p{2.00in}|}{\textit{\textcolor[HTML]{808080}{unique identifier for a gps location at a specific timestamp}}} \\ % FILL HERE 
+\hhline{----}
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{longitude}}}  % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{degrees}}}  % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{double precision}}}  % FILL HERE 
+\multicolumn{1}{|p{2.00in}|}{\textit{\textcolor[HTML]{808080}{longitude of a seagull GPS location in projection system (EPSG:4326)}}} \\ % FILL HERE 
+\hhline{----}
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{latitude}}}  % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{degrees}}}  % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{double precision}}}  % FILL HERE 
+\multicolumn{1}{|p{2.00in}|}{\textit{\textcolor[HTML]{808080}{latitude of a seagull GPS location in projection system WGS84 (EPSG:4326)}}} \\ % FILL HERE 
+\hhline{----}
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{acquisition\_time}}} % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{utc}}} % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{timestamp with time zone}}} % FILL HERE 
+\multicolumn{1}{|p{2.00in}|}{\textit{\textcolor[HTML]{808080}{UTC date and time of a GPS location}}} \\ % FILL HERE 
+\hhline{----}
+% ADD AS MANY COLUMNS AS NECESSARY 
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%% Table No: 3 ends here %%%%%%%%%%%%%%%%%
+\text{+ data type: integer, double precision, timestamp without time zone, geometry, etc...}
+%%%%%%%%%%%% DESCRIPTION OF COLUMNS ends here %%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,878 @@
+%%%%%%%%%%%%  v2.0.0-beta  %%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=1.16in,right=0.91in,top=1.26in,bottom=0.88in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.49in,0.98in,1.47in,1.96in,2.45in,2.94in,3.43in,3.92in,4.41in,4.9in,5.39in,5.88in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{ 
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[H]	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./../customXml/item1.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~	\begin{subfigure}		\includegraphics[width=0.2\textwidth]{./numbering.xml}
+	\end{subfigure}
+~
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.3}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% RESEARCH DATA JOURNAL %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+\pagestyle{plain} %add page numbers 
+\begin{document} %begin document
+
+%The name of this document: Research Data Journal 
+{\fontsize{18pt}{21.6pt}\selectfont \textcolor[HTML]{BC0031}{Research Data Journal}\par}\par
+%The date (YYYY-MM-DD) when the research data journal has been completed 
+{\fontsize{14pt}{16.8pt}\selectfont \textit{Date \textcolor[HTML]{808080}{YYYY-MM-DD}}\par}\par %FILL HERE
+
+
+
+%%%%%%%%%%%%%%%%%%%% GENERAL : starts here %%%%%%%%%%%%%%%%%%%%
+{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{General}\par}\par
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.67in}p{4.13in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{1.67in}}{\textbf{Researcher}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{Name, Surname}}} \\ %FILL HERE 
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{1.67in}}{\textbf{Researcher ID}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{e.g. Digital Author Identifier (DAI), ORCID}}} \\ %FILL HERE
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{1.67in}}{\textbf{Researcher Affiliations}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{university, department, address}}} \\ %FILL HERE
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{1.67in}}{\textbf{Supervisors}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{1. Name, Surname \newline 2. Name, Surname}}} \\ %FILL HERE
+\hhline{--}
+%row no:5
+\multicolumn{1}{|p{1.67in}}{\textbf{Supervisors ID}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{e.g. Digital Author Identifier (DAI), ORCID}}} \\ %FILL HERE
+\hhline{--}
+%row no:6
+\multicolumn{1}{|p{1.67in}}{\textbf{Supervisors Affiliations}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{university, department, address}}} \\ %FILL HERE
+\hhline{--}
+%row no:7
+\multicolumn{1}{|p{1.67in}}{\textbf{Project title}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{forest habitat analysis across taxa}}} \\ %FILL HERE
+\hhline{--}
+%row no:8
+\multicolumn{1}{|p{1.67in}}{\textbf{Project acronym}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{HABTAX}}} \\ %FILL HERE
+\hhline{--} 
+%row no:9
+\multicolumn{1}{|p{1.67in}}{\textbf{Project description}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{A description of the aim of the project.}}} \\ %FILL HERE
+\hhline{--}
+%row no:10
+\multicolumn{1}{|p{1.67in}}{\textbf{Project duration}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{from YYYY-MM-DD to YYYY-MM-DD}}} \\ %FILL HERE 
+\hhline{--}
+%row no:11
+\multicolumn{1}{|p{1.67in}}{\textbf{Funder(s)}} & 
+\multicolumn{1}{|p{4.13in}|}{} \\ %FILL HERE
+\hhline{--}
+%row no:12
+\multicolumn{1}{|p{1.67in}}{\textbf{Related documents}} & 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{e.g. project proposal}}} \\ %FILL HERE
+\hhline{--}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% GENERAL ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% COMPUTER AND SOFTWARE SPECIFICATIONS starts here %%%%%%%%%%%%%%%%%%%%
+{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Computer and software specifications}\par}\par
+
+%%%%%% OPERATING SYSTEM starts here %%%%%% 
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.67in}p{4.13in}}
+\hline
+%row no:1 ------- COLUMN NAME OF THE TABLE ------- 
+\multicolumn{1}{|p{1.67in}}{\textbf{Operating system}} & 
+%row no:1 ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{4.13in}|}{\textit{\textcolor[HTML]{808080}{e.g., macOS, ubuntu14.04, Windows10}}} \\ %FILL HERE 
+\hhline{--}
+\end{tabular}
+\end{table}
+
+%%%%%% OPERATING SYSTEM ends here %%%%%% 
+
+%%%%%% REQUIRED SOFTWARE starts here %%%%%% 
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.20in}p{0.60in}p{3.79in}}
+\hline
+%row no:1    ------- COLUMN NAMES OF THE TABLE ------- 
+\multicolumn{1}{|p{1.20in}}{\textbf{Required Software}} & 
+\multicolumn{1}{|p{0.60in}}{\textbf{Version}} & 
+\multicolumn{1}{|p{3.79in}|}{\textbf{Libraries/Packages/Modules/Plugins}} \\
+\hhline{---}
+%row no:2    ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{1.20in}}{\textit{\textcolor[HTML]{808080}{R}}} & % FILL HERE 
+\multicolumn{1}{|p{0.60in}}{\textit{\textcolor[HTML]{808080}{3.6.1.}}} & % FILL HERE 
+\multicolumn{1}{|p{3.79in}|}{\textit{\textcolor[HTML]{808080}{dplyr, RpostgreSQL}}} \\ % FILL HERE 
+\hhline{---}
+%row no:2
+\multicolumn{1}{|p{1.20in}}{\textit{\textcolor[HTML]{808080}{GRASS}}} & % FILL HERE
+\multicolumn{1}{|p{0.60in}}{\textit{\textcolor[HTML]{808080}{7}}} & % FILL HERE
+\multicolumn{1}{|p{3.79in}|}{\textit{\textcolor[HTML]{808080}{}}} \\ % FILL HERE
+\hhline{---}
+%row no:2
+\multicolumn{1}{|p{1.20in}}{\textit{\textcolor[HTML]{808080}{QGIS}}} & % FILL HERE
+\multicolumn{1}{|p{0.60in}}{\textit{\textcolor[HTML]{808080}{3.6.}}} & % FILL HERE
+\multicolumn{1}{|p{3.79in}|}{\textit{\textcolor[HTML]{808080}{openlayers}}} \\ % FILL HERE
+\hhline{---}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%% REQUIRED SOFTWARE ends here %%%%%% 
+
+%%%%%%%%%%%%%%%%%%%% COMPUTER AND SOFTWARE SPECIFICATIONS ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% DIRECTORY STRUCTURE starts here %%%%%%%%%%%%%%%%%%%%
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Directory structure }\par}\par
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{1. How did you structure the digital archive? How were files and folders named?} 
+\par \textit{\textcolor[HTML]{808080}{Describe here in short the directory tree so that it is easy to navigate through the archive. For instance, one could add a schematic representation of the directory tree (see Fig. 6 in guidelines).}} 
+\par \textit{\textcolor[HTML]{808080}{Give a description on the naming conventions that you followed. For example: <ProjectCode>/<ReactionProduct>/Analysis/YYYY-MM-DD <Technique>.csv }}} \\ % FILL HERE
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% DIRECTORY STRUCTURE ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% DATASETS AND ANALYSIS starts here %%%%%%%%%%%%%%%%%%%%
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Datasets and Analysis}\par}\par
+
+
+%%%%%%%% 2. GENERIC DESCRIPTION OF DATASETS starts here %%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{2. Provide a generic description of each dataset used throughout the research project.} \par \textit{Please describe all the datasets that were used throughout the project in the table below. Describe also the non-digital datasets that were used (e.g., museum collection, photos, archive documents) and make sure that it is clear where to find those.}} \\ 
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{0.80}p{0.80in}p{3.70in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.80in}}{\textbf{Dataset name}} & 
+\multicolumn{1}{|p{0.80in}|}{\textbf{Dataset acronym}} &
+\multicolumn{1}{|p{3.70in}|}{\textbf{Dataset description}} \\
+\hhline{----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE -------  
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Gull GPS movement data}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{3.70in}|}{\textit{\textcolor[HTML]{808080}{GPS movement data of 5 GPS monitored seagulls in Amsterdam, The Netherlands, monitored over a period of 3 years (March 2016-March 2019). GPS movement data has been collected using uva-bits tags and were subsequently stored in the uva-bits bird tracking database.}}} \\ % FILL HERE 
+\hhline{----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D2}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Elephant GPS movement data}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{ELEPGPS}}} & % FILL HERE
+\multicolumn{1}{|p{3.70in}|}{\textit{\textcolor[HTML]{808080}{GPS movement data of 32 GPS monitored elephants of a single population in Hwange National Park, Zimbabwe, monitored over a period of 8 years (July 2009-April 2017). Data is available upon request from movebank.}}} \\ % FILL HERE
+\hhline{----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D3}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{High resolution layer - Forest cover density 2015 (20 m)}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{TCDRAST}}} & % FILL HERE
+\multicolumn{1}{|p{3.70in}|}{\textit{\textcolor[HTML]{808080}{Tree cover density raster layer providing level of tree cover density in a range from 0-100\%. This dataset is openly provided by the Copernicus project.}}} \\ % FILL HERE
+\hhline{----}
+%row no:5
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D4}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Roe Deer Habitat use Sequences}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{ROESEQ}}} & % FILL HERE
+\multicolumn{1}{|p{3.70in}|}{\textit{\textcolor[HTML]{808080}{A dataset including real and simulated habitat use sequences (i.e., annotations of GPS trajectories) of 404 roe deer ranging in 9 population in Europe. The dataset also includes home ranges in raster format of each animal. Data from the paper “Individual Movement - Sequence Analysis Method (IM-SAM): characterizing spatio-temporal patterns of animal habitat use across landscapes”.}}} \\ % FILL HERE
+\hhline{----}
+%row no:6
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D5}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Lidar Europe/Africa}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{3.70in}|}{\textit{\textcolor[HTML]{808080}{LIDAR scans from 50 locations in Europe and 50 locations in Africa.}}} \\ % FILL HERE
+\hhline{----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 ends here %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% 2. GENERIC DESCRIPTION OF DATASETS ends here %%%%%%%%
+
+
+\newpage
+
+
+%%%% 3. FILE FORMATS, SOFTWARE REQUIREMENTS AND SIZE OF DATASETS starts here %%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{3. What is the file format and size of each dataset? Are there software requirements to open the files?}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 3 starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{0.80}p{1.30in}p{0.70in}p{0.50in}p{1.60in}}
+\hline
+%row no:1         ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.80in}}{\textbf{Dataset}} & 
+\multicolumn{1}{|p{1.30in}}{\textbf{Characteristics$\ast$}} & 
+\multicolumn{1}{|p{0.70in}|}{\textbf{Format}} &
+\multicolumn{1}{|p{0.50in}|}{\textbf{Size (MB)}} & 
+\multicolumn{1}{|p{1.60in}|}{\textbf{Software requirements $\ast$ $\ast$}} \\
+\hhline{------}
+%row no:2         ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Table,Spatial}}} & % FILL HERE 
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{csv}}} & % FILL HERE 
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{35}}} & % FILL HERE 
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{}}} \\ % FILL HERE 
+\hhline{------}
+%row no:2
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D2}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{ELEPGPS}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Table, Spatial}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{csv}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{30}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{}}} \\ % FILL HERE
+\hhline{------}
+%row no:2
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D3}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{TCDRAST}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Raster, Spatial}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{tiff}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{1150}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{}}} \\ % FILL HERE
+\hhline{------}
+%row no:2
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D4}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{ROESEQ}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Table, Raster, Spatial}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{RDS}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{200}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{R}}} \\ % FILL HERE
+\hhline{------}
+%row no:2
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D5}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Spatial}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{LAS}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{100000}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{}}} \\ % FILL HERE
+\hhline{------}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+% Footnote
+\textit{$\ast$ Qualitative, quantitative, table, raster, spatial, textual, images, audio, video, software source code, computation model output,…} \\
+\textit{$\ast$$\ast$ fill in if the file format is specific to a software}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 3 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%% 3. FILE FORMATS, SOFTWARE REQUIREMENTS AND SIZE OF DATASETS ends here %%%%
+
+
+\newpage
+
+
+%%%%%%%%% 4. DATASETS AND RELATED ANALYSIS starts here %%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{4. Which datasets are linked to which analysis? Which software has been used for different sets of analysis?} 
+\par \textit{{One analysis could be linked to multiple analysis scripts or software projects.}}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 4 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{1.00}p{2.50in}p{0.90in}p{0.80in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{1.00in}}{\textbf{Analysis}} & 
+\multicolumn{1}{|p{2.50in}}{\textbf{Analysis scripts \newline software project names $\ast$}} & 
+\multicolumn{1}{|p{0.90in}|}{\textbf{Dataset}} &
+\multicolumn{1}{|p{0.80in}|}{\textbf{software}} \\
+\hhline{-----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A1}}} & % FILL HERE 
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{Gull habitat selection}}} & % FILL HERE 
+\multicolumn{1}{|p{2.50in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/ANALYSIS/.}{gullgps\_habitat\_selection.R}}}} & % FILL HERE 
+\multicolumn{1}{|p{0.90in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS TCDRAST}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{R}}} \\ % FILL HERE 
+\hhline{-----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A2}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{Elephant habitat selection}}} & % FILL HERE
+\multicolumn{1}{|p{2.50in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/ANALYSIS/.}{elepgps\_habitat\_selection.R}}}} & % FILL HERE
+\multicolumn{1}{|p{0.90in}|}{\textit{\textcolor[HTML]{808080}{ELEPGPS LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{R}}} \\ % FILL HERE
+\hhline{-----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A3}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{Roe deer sequential habitat analysis}}} & % FILL HERE
+\multicolumn{1}{|p{2.50in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS2/ANALYSIS/.}{roeseq\_seq\_habitat\_analysis.rdm}}}} & % FILL HERE
+\multicolumn{1}{|p{0.90in}|}{\textit{\textcolor[HTML]{808080}{ROESEQ TCDRAST LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}|}{\textit{\textcolor[HTML]{808080}{R}}} \\ % FILL HERE
+\hhline{-----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 4 ends here %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% 4. DATASETS AND RELATED ANALYSIS ends here %%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% 5. DESCRIPTION OF THE ANALYSIS starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{5. Describe each analysis with sufficient detail.}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 5 starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{0.80}p{4.60in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.80in}}{\textbf{Analysis name}} & 
+\multicolumn{1}{|p{4.60in}|}{\textbf{Analysis Description}} \\
+\hhline{----}
+%row no:2         ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Gull habitat selection}}} & % FILL HERE 
+\multicolumn{1}{|p{4.60in}|}{\textit{\textcolor[HTML]{808080}{This script analyses the gulls’ selection for open habitats. We used the software R and packages adehabitatHS to calculate the selection coefficients and ggplot2 for generating figures. The output of this script are 2 main figures and a table with the summary of the model.}}} \\ % FILL HERE 
+\hhline{----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A2}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Elephant habitat selection}}} & % FILL HERE
+\multicolumn{1}{|p{4.60in}|}{\textit{\textcolor[HTML]{808080}{...}}} \\ % FILL HERE
+\hhline{----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{A3}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Roe deer sequential habitat analysis}}} & % FILL HERE
+\multicolumn{1}{|p{4.60in}|}{\textit{\textcolor[HTML]{808080}{...}}} \\ % FILL HERE
+\hhline{----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 5 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% 5. DESCRIPTION OF THE ANALYSIS ends here %%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% 6. RESULTS OF THE ANALYSIS starts here %%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{6. What are the results of an analysis?}
+\par \textit{{The results of an analysis might be for instance, figures, tables, statistical outputs,...}}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 6 starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{0.30}p{2.40in}p{1.50in}p{0.70in}p{0.45in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.30in}}{\textbf{type}} & 
+\multicolumn{1}{|p{2.40in}|}{\textbf{File or folder name where the result is stored}} &
+\multicolumn{1}{|p{1.50in}|}{\textbf{Description of the result}} & 
+\multicolumn{1}{|p{0.70in}|}{\textbf{Dataset}} & 
+\multicolumn{1}{|p{0.40in}|}{\textbf{Ana-lysis}} \\
+\hhline{-------}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{R1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{Fig}}} & % FILL HERE 
+\multicolumn{1}{|p{2.40in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/RESULTS/FIGURES/.}{A1\_mapHS\_GULLGPS.png}}}} & % FILL HERE 
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{Map of gull habitat selection}}} & % FILL HERE 
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{0.40in}|}{\textit{\textcolor[HTML]{808080}{A1}}} \\ % FILL HERE 
+\hhline{-------}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{R2}}} & % FILL HERE
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{Fig}}} & % FILL HERE
+\multicolumn{1}{|p{2.40in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/RESULTS/FIGURES/.}{A1\_barchartsHS\_GULLGPS.png}}}} & % FILL HERE
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{Habitat selection summarised in barcharts}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE
+\multicolumn{1}{|p{0.40in}|}{\textit{\textcolor[HTML]{808080}{A1}}} \\ % FILL HERE
+\hhline{-------}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{R3}}} & % FILL HERE
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{Fig}}} & % FILL HERE
+\multicolumn{1}{|p{2.40in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/RESULTS/individual_maps/.}{/individual\_maps/...}}}} & % FILL HERE
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{Folder with 10 maps plotting gull movement trajectories}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE
+\multicolumn{1}{|p{0.40in}|}{\textit{\textcolor[HTML]{808080}{A1}}} \\ % FILL HERE
+\hhline{-------}
+%row no:5
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{R4}}} & % FILL HERE
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{Tab}}} & % FILL HERE
+\multicolumn{1}{|p{2.40in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS1/RESULTS/.}{A1\_modHS\_GULLGPS.csv}}}} & % FILL HERE
+\multicolumn{1}{|p{1.50in}|}{\textit{\textcolor[HTML]{808080}{Habitat selection Model outputs}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE
+\multicolumn{1}{|p{0.40in}|}{\textit{\textcolor[HTML]{808080}{A1}}} \\ % FILL HERE
+\hhline{-------}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 6 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% 6. RESULTS OF THE ANALYSIS ends here %%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 6 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% 7. MANUSCRIPTS LINKED TO DATASETS starts here %%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{7. Which manuscripts are linked to which datasets?}
+\par \textit{{Please also include unfinished manuscripts in this archive and specify the status.}}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 7 starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.30in}p{0.80}p{2.60in}p{0.90in}p{0.70in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.30in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.80in}}{\textbf{status}} & 
+\multicolumn{1}{|p{2.60in}}{\textbf{Manuscript}} & 
+\multicolumn{1}{|p{0.90in}|}{\textbf{Dataset Acronym}} &
+\multicolumn{1}{|p{0.70in}|}{\textbf{Analysis}} \\
+\hhline{-----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{MS1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Published (07-2017)}}} & % FILL HERE 
+\multicolumn{1}{|p{2.60in}|}{\textit{\textcolor[HTML]{808080}{doi}}} & % FILL HERE 
+\multicolumn{1}{|p{0.90in}|}{\textit{\textcolor[HTML]{808080}{GULLGPS ELEPGPS LIDAREA TCDRAST}}} & % FILL HERE 
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{A1; A2}}} \\ % FILL HERE 
+\hhline{-----}
+%row no:3
+\multicolumn{1}{|p{0.30in}}{\textit{\textcolor[HTML]{808080}{MS2}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{Draft}}} & % FILL HERE
+\multicolumn{1}{|p{2.60in}|}{\textit{\textcolor[HTML]{808080}{\href{MANUSCRIPTS/MS2/.}{MS2\_roedeer\_seq\_habitat\_analysis}}}} & % FILL HERE
+\multicolumn{1}{|p{0.90in}|}{\textit{\textcolor[HTML]{808080}{ROESEQ TCDRAST LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{0.70in}|}{\textit{\textcolor[HTML]{808080}{A3}}} \\ % FILL HERE
+\hhline{-----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 7 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% 7. MANUSCRIPTS LINKED TO DATASETS ends here %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% DATA AND ANALYSIS ends here %%%%%%%%%%%%%%%%%%%
+
+
+%\vspace{\baselineskip}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% 8. METADATA DOCUMENTATION starts here %%%%%%%%%%%%%%%%%%%%
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Metadata documentation}\par}\par
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{8. What metadata standard and metadata format did you use?} 
+\par \textit{{Please describe more in detail which metadata standards and metadata formats were used for the datasets. A metadata template (MetadataTemplate) is available to facilitate metadata documentation.}}
+\par \textit{{examples of metadata standard: EML, Darwin core, Dublin core standard}}
+\par \textit{{examples of metadata format: XML, RDF, TXT, PDF/LATEX}}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 8 starts here %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{1.00}p{1.80in}p{1.00in}p{1.30in}}
+\hline
+%row no:1       ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{1.00in}}{\textbf{Dataset acronym}} & 
+\multicolumn{1}{|p{1.80in}}{\textbf{Metadata standard}} & 
+\multicolumn{1}{|p{1.00in}|}{\textbf{Metadata form}} &
+\multicolumn{1}{|p{1.30in}|}{\textbf{resources}} \\
+\hhline{-----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D1}}} & % FILL HERE 
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{1.80in}|}{\textit{\textcolor[HTML]{808080}{minimum set of metadata provided following Dublin Core Standard, using the MetadataTemplate. \newline UvA bits data structure
+}}} & % FILL HERE 
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{Documented in PDF/LATEX}}} & % FILL HERE 
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{For generic information about uva-bits database structure see also \href{https://wiki.pubserv.e-ecology.nl/wiki/index.php/DB\_Views\_2015}{here}}}} \\ % FILL HERE 
+\hhline{-----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D2}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{ELEPGPS}}} & % FILL HERE
+\multicolumn{1}{|p{1.80in}|}{\textit{\textcolor[HTML]{808080}{minimum set of metadata provided following Dublin Core Standard, using the MetadataTemplate. \newline Movebank data structure
+}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{Documented in PDF/LATEX}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{See also 
+ \href{https://www.movebank.org/panel_embedded_movebank_webapp?gwt_fragment=page\%3Dsearch_map_linked\%2CindividualIds\%3D307790752*\%2B307790755*\%2B307790758*\%2B307790761*\%2B307790764*\%2B307790767*\%2B307790770*\%2B307790773*\%2B307790776*\%2B307790710*\%2B307790716*\%2B307790719*\%2B307790722*\%2B307790725*\%2B307790728*\%2B307790731*\%2B307790734*\%2B307790737*\%2B307790740*\%2B307790743*\%2B307790746*\%2B307790749*\%2B307790668*\%2B307790703*\%2B307790677*\%2B307790680*\%2B307790683*\%2B307790686*\%2B307790690*\%2B307790693*\%2B307790696*\%2B307790700*\%2Clat\%3D-19.210471191824794\%2Clon\%3D26.19414150000129\%2Cz\%3D8}{here}}}} \\ % FILL HERE
+\hhline{-----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D3}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{TCDRAST}}} & % FILL HERE
+\multicolumn{1}{|p{1.80in}|}{\textit{\textcolor[HTML]{808080}{Based on the metadata described at the copernicus website (see link) using the MetadataTemplate.}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{Documented in PDF/LATEX}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{see \href{https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density/status-maps/2015?tab=metadata}{here}}}} \\ % FILL HERE
+\hhline{-----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D4}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{ROESEQ}}} & % FILL HERE
+\multicolumn{1}{|p{1.80in}|}{\textit{\textcolor[HTML]{808080}{metadata provided as described in the zenodo archive}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}|}{\textit{\textcolor[HTML]{808080}{Documented in TXT}}} & % FILL HERE 
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{see \href{https://doi.org/10.5281/zenodo.1254230}{here}}}} \\ % FILL HERE
+\hhline{-----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Table No: 8 ends here %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% 8. METADATA DOCUMENTATION ends here %%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%% 9. DATA ACCESSIBILITY starts here %%%%%%%%%%%%%%%%%%%%
+
+\vspace{\baselineskip}{\fontsize{14pt}{16.8pt}\selectfont \textcolor[HTML]{BC0031}{Data Accessibility}\par}\par
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{9. Where are datasets stored and what are the original terms of use?} \par  \par \textit{{From this section it should be clear where the data can be found (weblink, DOI), whether it is accessible online and what are the terms of use for the general public. Here should be the information relevant for citing the dataset.}}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Table No: 9 starts here %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{1.00}p{1.20in}p{1.30in}p{1.60in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{1.00in}}{\textbf{Dataset acronym}} & 
+\multicolumn{1}{|p{1.20in}}{\textbf{Source}} & 
+\multicolumn{1}{|p{1.30in}|}{\textbf{terms}} &
+\multicolumn{1}{|p{1.60in}|}{\textbf{Link/DOI/...}} \\
+\hhline{-----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D1}}} & % FILL HERE 
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{1.20in}|}{\textit{\textcolor[HTML]{808080}{uva-bits tracking database
+}}} & % FILL HERE 
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Available upon request <contact person>}}} & % FILL HERE 
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{ \href{https://phppgadmin.pubserv.e-ecology.nl/}{phppgadmin-link}}}} \\ % FILL HERE 
+\hhline{-----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D2}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{ELEPGPS}}} & % FILL HERE
+\multicolumn{1}{|p{1.20in}|}{\textit{\textcolor[HTML]{808080}{movebank}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Available upon request <contact person>}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{Available \href{https://www.movebank.org/panel_embedded_movebank_webapp?gwt_fragment=page\%3Dsearch_map_linked\%2CindividualIds\%3D307790752*\%2B307790755*\%2B307790758*\%2B307790761*\%2B307790764*\%2B307790767*\%2B307790770*\%2B307790773*\%2B307790776*\%2B307790710*\%2B307790716*\%2B307790719*\%2B307790722*\%2B307790725*\%2B307790728*\%2B307790731*\%2B307790734*\%2B307790737*\%2B307790740*\%2B307790743*\%2B307790746*\%2B307790749*\%2B307790668*\%2B307790703*\%2B307790677*\%2B307790680*\%2B307790683*\%2B307790686*\%2B307790690*\%2B307790693*\%2B307790696*\%2B307790700*\%2Clat\%3D-19.210471191824794\%2Clon\%3D26.19414150000129\%2Cz\%3D8}{here} at movebank.org}}} \\ % FILL HERE
+\hhline{-----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D3}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{TCDRAST}}} & % FILL HERE
+\multicolumn{1}{|p{1.20in}|}{\textit{\textcolor[HTML]{808080}{copernicus}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Public dataset, available after registration}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{Available  \href{https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density/status-maps/2015}{here} at land.copernicus.eu}}} \\ % FILL HERE
+\hhline{-----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D4}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{ROESEQ}}} & % FILL HERE
+\multicolumn{1}{|p{1.20in}|}{\textit{\textcolor[HTML]{808080}{zenodo}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Public dataset}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{ \href{https://zenodo.org/record/1254230}{zenodo-link}}}} \\ % FILL HERE
+\hhline{-----}
+%row no:5
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D5}}} & % FILL HERE
+\multicolumn{1}{|p{1.00in}}{\textit{\textcolor[HTML]{808080}{LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{1.20in}|}{\textit{\textcolor[HTML]{808080}{Lidar database}}} & % FILL HERE
+\multicolumn{1}{|p{1.30in}|}{\textit{\textcolor[HTML]{808080}{Public dataset}}} & % FILL HERE
+\multicolumn{1}{|p{1.60in}|}{\textit{\textcolor[HTML]{808080}{Link to database
+\newline server = <server> \newline host = <host> \newline For other access details to access the database contact <contact person>}}} \\ % FILL HERE
+\hhline{-----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Table No: 9 ends here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% 9. DATA ACCESSIBILITY end here %%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%% 10. DATA STORAGE starts here %%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{5.99in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{5.99in}|}{\textbf{10. Is the dataset stored physically in the archive? If yes, which folder? If no, where and how can the data be retrieved?}} \\
+\hhline{-}
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 10 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.20in}p{0.80}p{0.50in}p{4.00in}}
+\hline
+%row no:1        ------- COLUMN NAMES OF THE TABLE -------
+\multicolumn{1}{|p{0.20in}}{\textbf{Nr}} & 
+\multicolumn{1}{|p{0.80in}}{\textbf{Dataset acronym}} & 
+\multicolumn{1}{|p{0.50in}|}{\textbf{Stored in data archive}} &
+\multicolumn{1}{|p{4.00in}|}{\textbf{location}} \\
+\hhline{----}
+%row no:2        ------- FILL THE TABLE STARTING FROM HERE ------- 
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D1}}} & % FILL HERE 
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{GULLGPS}}} & % FILL HERE 
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{Yes}}} & % FILL HERE 
+\multicolumn{1}{|p{4.00in}|}{\textit{\textcolor[HTML]{808080}{\href{DATA/GULLGPS/.}{DATA/GULLGPS}}}} \\ % FILL HERE 
+\hhline{----}
+%row no:3
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D2}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{ELEPGPS}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{Yes}}} & % FILL HERE
+\multicolumn{1}{|p{4.00in}|}{\textit{\textcolor[HTML]{808080}{\href{DATA/ELEPGPS/.}{DATA/ELEPGPS}}}} \\ % FILL HERE
+\hhline{----}
+%row no:4
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D3}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{TCDRAST}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{Yes}}} & % FILL HERE
+\multicolumn{1}{|p{4.00in}|}{\textit{\textcolor[HTML]{808080}{\href{DATA/TCDRAST/.}{DATA/TCDRAST}}}} \\ % FILL HERE
+\hhline{----}
+%row no:5
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D4}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{ROESEQ}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{Yes}}} & % FILL HERE
+\multicolumn{1}{|p{4.00in}|}{\textit{\textcolor[HTML]{808080}{\href{DATA/ROESEQ/.}{DATA/ROESEQ}}}} \\ % FILL HERE
+\hhline{----}
+%row no:6
+\multicolumn{1}{|p{0.20in}}{\textit{\textcolor[HTML]{808080}{D5}}} & % FILL HERE
+\multicolumn{1}{|p{0.80in}}{\textit{\textcolor[HTML]{808080}{LIDAREA}}} & % FILL HERE
+\multicolumn{1}{|p{0.50in}|}{\textit{\textcolor[HTML]{808080}{No}}} & % FILL HERE
+\multicolumn{1}{|p{4.00in}|}{\textit{\textcolor[HTML]{808080}{Same as above}}} \\ % FILL HERE
+\hhline{----}
+%ADD ROWS IF NECESSARY 
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%% Table No: 10 ends here %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% 10. DATA STORAGE ends here %%%%%%%%%%%%%%%%%
+
+\end{document}
